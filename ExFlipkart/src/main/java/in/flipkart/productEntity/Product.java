@@ -13,6 +13,7 @@ import lombok.Data;
 @Table(name = "FlipkartProduct")
 public class Product {
 	@Id
+	//this is for auto generate id 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column
 	private Integer productId;

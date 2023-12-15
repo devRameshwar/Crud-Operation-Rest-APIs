@@ -2,6 +2,7 @@ package in.flipkart.RestController;
 
 import java.util.List;
 
+import in.flipkart.ProductDto.ProductDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,9 +24,9 @@ public class ProductRestController {
 	private ProductService service;
 
 	@PostMapping("/product")
-	public ResponseEntity<String> addBook(@RequestBody Product product) {
-		System.err.println(product.getProductName());
-		String msg = service.upsertProduct(product);
+	public ResponseEntity<String> addBook(@RequestBody ProductDto productDto) {
+		//System.err.println(product.getProductName());
+		String msg = service.upsertProduct(productDto);
 		return new ResponseEntity<String>(msg, HttpStatus.CREATED);
 	}
 

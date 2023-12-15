@@ -2,11 +2,12 @@ package in.flipkart.ProductService;
 
 import java.util.List;
 
+import in.flipkart.ProductDto.ProductDto;
 import in.flipkart.productEntity.Product;
 
 public interface ProductServiceInterface {
 
-	public String upsertProduct(Product product);
+	public String upsertProduct(ProductDto productDto);
 
 	public List<Product> getProduct();
 
